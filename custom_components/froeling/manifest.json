@@ -1,7 +1,7 @@
 {
   "domain": "froeling",
   "name": "Fr\u00f6ling",
-  "verson": "0.1.0", 
+  "version": "0.1.0", 
   "config_flow": true,
   "integration_type": "device",
   "documentation": "https://github.com/Layf21/ha-froeling-integration",
