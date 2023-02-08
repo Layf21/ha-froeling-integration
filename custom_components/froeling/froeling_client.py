@@ -56,7 +56,7 @@ class Froeling:
             },
             timeout=20,
         )
-        if res.status_code == 403:
+        if res.status_code != 200:
             raise AuthenticationError(res.text)
         self.session = res.json()
         self.token = res.headers["authorization"]
@@ -67,7 +67,7 @@ class Froeling:
         res = requests.get(
             url, timeout=10, headers=headers | {"Authorization": self.token}
         )
-        if res.status_code == 403:
+        if res.status_code != 200:
             raise AuthenticationError(res.text)
         data = res.json()
         for d in data:

@@ -65,7 +65,7 @@ class ActiveSensor(CoordinatorEntity, BinarySensorEntity):
             model=fac.friendly_name
         )
 
-        self._attr_name = "Aktiv"
+        self._attr_name = f"{device_info['componentId']} Aktiv"
 
     @callback
     def _handle_coordinator_update(self) -> None:
